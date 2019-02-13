@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slider</title>
+    <link type="text/css" href="css/bootstra.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+</head>
+<body>
+<div class="gallery">
+  <div class="row works">
+    <h1>Примеры выполненных работ</h1>
+    <p>Кухни разработанные и произведенные нами.</p>
+    <div class="col-md-4">
+      <div class="gal_img">
+        <a href="img/img1_1.jpg" data-title="My first caption">
+          <img src="img/img1_1.jpg"  width=100% height = 100% class="img-rounded"/>
+        </a>
+        <span class="hover">
+           
+          <a href="#modal-1" data-toggle="modal">
+            <p>Кухня стеклянные фасады. Столешница и барная стойка изготовлены из акрилового камня.</p>
+          </a>
+         
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-1" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+       <div id="example5" class="slider-pro" style="display: none;">
+
+          <div class="sp-slides">
+            <div class="sp-slide">
+              <img class="sp-image" src="img/blank.gif" data-src="img/img1_1_md.jpg" data-retina="img/img1_1_lg.jpg"/>
+            </div>
+            <div class="sp-slide">
+              <img class="sp-image" src="img/blank.gif" data-src="img/img1_2_md.jpg" data-retina="img/img1_2_lg.jpg"/>
+            </div>
+            <div class="sp-slide">
+              <img class="sp-image" src="img/blank.gif" data-src="img/img1_3_md.jpg" data-retina="img/img1_3_lg.jpg"/>
+            </div>
+            <div class="sp-slide">
+              <img class="sp-image" src="img/blank.gif" data-src="img/img1_4_md.jpg"  data-retina="img/img1_4_lg.jpg"/>
+            </div>
+            <div class="sp-slide">
+              <img class="sp-image" src="img/blank.gif" data-src="img/img1_5_md.jpg"  data-retina="img/img1_5_lg.jpg"/>
+            </div>
+          </div>
+
+
+          <div class="sp-thumbnails">
+            <div class="sp-thumbnail">
+              <div class="sp-thumbnail-image-container">
+                <img class="sp-thumbnail-image" src="img/img1_1_thu.jpg"/>
+              </div>
+            </div>
+            <div class="sp-thumbnail">
+              <div class="sp-thumbnail-image-container">
+                <img class="sp-thumbnail-image" src="img/img1_2_thu.jpg"/>
+              </div>
+            </div>
+            <div class="sp-thumbnail">
+              <div class="sp-thumbnail-image-container">
+                <img class="sp-thumbnail-image" src="img/img1_3_thu.jpg"/>
+              </div>
+            </div>
+            <div class="sp-thumbnail">
+              <div class="sp-thumbnail-image-container">
+                <img class="sp-thumbnail-image" src="img/img1_4_thu.jpg"/>
+              </div>
+            </div>
+            <div class="sp-thumbnail">
+              <div class="sp-thumbnail-image-container">
+                <img class="sp-thumbnail-image" src="img/img1_5_thu.jpg"/>
+              </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$( document ).ready(function( $ ) {
+$('#modal-1').on('shown.bs.modal', function () {
+  $(".slider-pro").css('display', 'block');
+$( '#example5' ).sliderPro({
+      width: 670,
+      height: 506,
+      orientation: 'vertical',
+      loop: false,
+      arrows: true,
+      buttons: false,
+      thumbnailsPosition: 'right',
+      thumbnailPointer: true,
+      thumbnailWidth: 180,
+      autoplay: false,
+ 
+      breakpoints: {
+        800: {
+          thumbnailsPosition: 'bottom',
+          thumbnailWidth: 270,
+          thumbnailHeight: 100
+        },
+        500: {
+          thumbnailsPosition: 'bottom',
+          thumbnailWidth: 120,
+          thumbnailHeight: 50
+        }
+      }
+    });
+$(".slider-pro").css('display', 'block');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    <script src="../static/jquery-1.12.3.min.js"></script>
+    <script src="../static/bootstrap.js"></script>
+    <link type="text/css" href="../static/bootstra.css" rel="stylesheet"/>
+    <link type="text/css" href="../static/lightbox.css" rel="stylesheet"/>
+    <link type="text/css" href="../static/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css"/>
+
+
+{% block javascript %}
+  {% if switch %}
+    <SCRIPT SRC="../static/myscript1.js"></SCRIPT>
+  {% else %}
+    <SCRIPT SRC="../static/myscript.js"></SCRIPT>
+  {% endif %}
+{% endblock %}
+
+</head>
+{% block content2 %} <body> {% endblock %}
+  <div class = "navbar navbar-default navbar-static-top">
+       <div class = "container">
+            <div class = "navbar-header">
+                 
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+    <span class="sr-only">Открыть навигацию</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+        </button>
+
+        <a class = "navbar-brand" href="#">
+        <img src="../static/logo_melax.png" alt="">
+        </a> 
+      </div>
+
+      <div class = "collapse navbar-collapse" id="responsive-menu">
+           <ul class="nav navbar-nav">
+           <li><a href="/" class="ancLinks">Главная</a></li>
+           <li><a href="/nashi_raboti.html" class="ancLinks">Наши работы</a></li>
+           <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Мебель под заказ <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                    <li><a href="mebel_pod_zakaz.html">Детские</a></li>
+                    <li><a href="mebel_pod_zakaz.html#prihojie">Прихожие</a></li>
+                    <li><a href="mebel_pod_zakaz.html#shkaf">Шкафы-гардеробные</a></li>
+                    <li><a href="mebel_pod_zakaz.html#k_stoli">Компьютерные столы</a></li>
+              </ul>
+            </li>            
+           <li><a href="/garniture.html">Фурнитура</a></li>
+           <li><a href="/materials.html">Материалы</a></li>
+           <li><a href="/kontakti.html">Контакты</a></li>
+
+         </ul>
+
+           <div class="soc_buttons">
+                        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+           </div>
+           <div class="phone">
+              <span style="color:white" class="ringo-phone">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                      (099)090-74-23<br>
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                      (099)090-74-23
+              </span>
+           </div> <!--/phone-->
+          </div>   
+        </div>
+      </div>
+    </div>
+
+
+{% block content1 %}
+  <div class="header">
+{% endblock %}
+    <div class = "container">
+      <div class = "row">
+        <a href="#" style="color: #fff; background-color: #48e" class="lightbox1 btn1"><span>Заказать обратный звонок</span></a>
+          <div class="backdrop"></div>
+            <div class="box">
+              <div class="close">
+                    X
+                  </div>
+                    <form  method = "post" id="contact-header" class="contact-form">
+                      <fieldset>
+                        <div class="text-col">
+                                <b>Заказать</b>
+                                <span class="note">обратный звонок:</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="text" style="padding-top:25px;"><input type="text" value=""  placeholder="Введите имя" name="username"  class="order-name" aria-hidden="true">
+                            </div>
+                            <div class="text"><input type="text" placeholder="Введите телефон" mask="+38 (XXX) XXX-XX-XX" name="phone" value="" class="order-phone">
+                            </div>
+                            <div class="submit"><input type="submit" value="Отправить" class="mybtn">
+                            </div>
+
+            <!--<div class="text">{{username}}</div> -->
+                            <span class="error-text">Ошибка заполнения. Заполните, пожалуйста, все поля и отправьте снова
+                            </span>
+                            </div>
+                        </fieldset>
+                    </form>
+              </div>  <!--/box-->
+
+
+{% block content %}
+          <div class="titleoglavnaya">
+              <span class="franchisesdesign">Корпусная мебель<br>без посредников</span>Европейское качество. Продуманная до мелочей
+                  <div class="elipse">
+                      <span class="bttn">Гарантия 1 год на мебель</span>
+                      <span class="bttn">Индивидуальный подход</span>
+                  </div>
+          </div>
+{% endblock %}
+
+
+      </div> <!--/row-->
+    </div>
+  </div> 
+<div class="footer">  
+<!-- Origional snipet by msurguy<http://bootsnipp.com/msurguy>, I editted his snipet so that it works with bootstrap 3.3 -->
+<div class="container">
+    <div class="row">
+            <div class="col-xs-4">
+                <ul class="list-unstyled">
+                  <h3>
+                    <li>Мы предлагаем<li>
+                    </h3>
+                    <span class="list_subtitle">по низким ценам</span>
+                    <p><a href="mebel_pod_zakaz.html">Детские</a><br><a href="mebel_pod_zakaz.html#prihojie">Прихожие</a><br><a href="mebel_pod_zakaz.html#shkaf">Шкафы-купе</a><br><a href="mebel_pod_zakaz.html#k_stoli">Компьютерные столы</a></p>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <ul class="list-unstyled">
+                  <h3>
+                    <li>Наши контакты<li>
+                    </h3>
+                    <span class="list_subtitle">для оперативной связи с нами!</span>
+                      <p>Телефон: <br>+38 099 090 74 23<br>+38 099 090 74 23<br>E-mail: <a href="mailto:artem_alexeev@hotmail.com">artem_alexeev@hotmail.com</a><br>Адрес: г.Харьков, ул Сумская, д.1 </p>                    
+                </ul>
+            </div>
+            
+            <div class="col-xs-4">
+                <ul class="list-unstyled">
+                  <h3>
+                    <li>Мы в соцсетях<li>
+                    </h3>
+                    <span class="list_subtitle">подписывайтесь на нас</span>
+                      <p style="margin-bottom: 5px;"><img src="../static/OK.png" alt="OK">&nbsp;&nbsp;<a href="http://ok.ru">Одноклассники</a></p>
+                      <p style="margin-bottom: 5px;"><img src="../static/VK.png" alt="VK">&nbsp;&nbsp;<a href="http://vk.com">Вконтакте</a></p>
+                      <p style="margin-bottom: 5px;"><img src="../static/insta.png" alt="Ins">&nbsp;&nbsp;<a href="http://instagram.com">Instagram</a></p>
+                    </ul>
+            </div>
+    </div>
+</div>
+</div>
+    
+    <div class="footer2">
+    <div class="container">
+    <div class="row">
+            <div class="col-xs-4">
+                <ul class="list-unstyled list-inline pull-left">
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Заказ</a></li>
+                    <li><a href="/kontakti.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-8">
+                <p class="text-muted pull-right">© 2016 Корпусная мебель. Корпусная мебель в Харькове: цены, продажа, установка</p>
+            </div>
+    </div>
+    </div>             
+    </div>                
+</div> <!--row-fluid-->     
+</div>
+<script src="../static/lightbox.js"></script>
+</body>
+</html>

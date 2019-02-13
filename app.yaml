@@ -1,0 +1,36 @@
+application: art-unit2
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /nashi_raboti.html
+  script: main_nr.app
+
+- url: /garniture.html
+  script: main_garniture.app
+
+- url: /materials.html
+  script: main_materials.app
+
+- url: /kontakti.html
+  script: main_kontakti.app
+
+- url: /mebel_pod_zakaz.html
+  script: main_mebel_pod_zakaz.app
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
+
